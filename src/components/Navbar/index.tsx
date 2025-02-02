@@ -15,7 +15,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const root = window.document.documentElement;
+    const root = window?.document?.documentElement;
     if (darkMode) {
       root.classList.add("dark");
     } else {

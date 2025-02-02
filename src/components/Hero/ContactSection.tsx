@@ -1,3 +1,5 @@
+"use client";
+
 import { JSX } from "react";
 import { SiWhatsapp, SiLinkedin, SiGithub, SiGmail } from "react-icons/si";
 

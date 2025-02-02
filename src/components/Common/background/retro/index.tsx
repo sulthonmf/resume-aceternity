@@ -1,3 +1,4 @@
+"use client"
 import { cn } from "@/lib/utils";
 
 interface RetroGridProps extends React.HTMLAttributes<HTMLDivElement> {

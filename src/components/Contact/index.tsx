@@ -4,11 +4,6 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { supabase } from "../../lib/supabase";
 import { cn } from "@/lib/utils";
 import { Label } from "@radix-ui/react-label";
-import {
-  IconBrandGithub,
-  IconBrandGoogle,
-  IconBrandOnlyfans,
-} from "@tabler/icons-react";
 import { Input } from "../Common/input";
 
 interface FormData {
