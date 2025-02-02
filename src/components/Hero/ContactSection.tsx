@@ -14,29 +14,42 @@ const iconMap: { [key: string]: JSX.Element } = {
 };
 
 interface ContactIconsProps {
-  contacts?: Contact[]; // Make it optional
+  contacts?: Contact[];
 }
 
-const ContactIcons = (
-  { contacts = [] }: ContactIconsProps // Default to an empty array
-) => (
-  <div className="flex space-x-4 mt-6 justify-center">
-    {contacts.map((contact, index) => (
-      <a
-        key={index}
-        href={
-          contact.detail.startsWith("http")
-            ? contact.detail
-            : `mailto:${contact.detail}`
-        }
-        className="hover:text-gray-300"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {iconMap[contact.name] || <span className="text-sm">No Icon</span>}{" "}
-      </a>
-    ))}
-  </div>
-);
+const ContactIcons = ({ contacts = [] }: ContactIconsProps) => {
+  const generateHref = (contact: Contact) => {
+    const { name, detail } = contact;
+
+    if (name === "Whatsapp") {
+      const phoneNumber = detail.replace(/\D/g, ""); // Remove non-numeric characters
+      return `https://wa.me/${phoneNumber}`;
+    } else if (name === "Gmail") {
+      return `mailto:${detail}`;
+    } else if (name === "LinkedIn" || name === "Github") {
+      return detail.startsWith("http") ? detail : `https://${detail}`;
+    } else if (/^\+?[0-9]+$/.test(detail)) {
+      return `tel:${detail}`; // Handle phone numbers
+    } else {
+      return detail; // Default fallback
+    }
+  };
+
+  return (
+    <div className="flex space-x-4 mt-6 justify-center">
+      {contacts.map((contact, index) => (
+        <a
+          key={index}
+          href={generateHref(contact)}
+          className="hover:text-gray-300"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {iconMap[contact.name] || <span className="text-sm">No Icon</span>}
+        </a>
+      ))}
+    </div>
+  );
+};
 
 export default ContactIcons;

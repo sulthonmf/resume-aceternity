@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-lg font-bold">_dev.smf</div>
 
-        <div>
+        <div className="md:hidden">
           <button
             onClick={toggleDarkMode}
             className="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
@@ -56,7 +56,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        <div className="hidden md:flex space-x-4 -ml-10 border px-2 py-2 rounded-full">
+        <div className="hidden md:flex space-x-4 md:-ml-10 border px-2 py-2 rounded-full">
           <a
             href="#about"
             onClick={() => handleSetActive("about")}
