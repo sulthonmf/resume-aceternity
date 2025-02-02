@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "name": "React",
+      "size": 60,
+      "icon": "React"
+    },
+    {
+      "name": "NextJS",
+      "size": 60,
+      "icon": "NextJS"
+    },
+    {
+      "name": "Tailwind",
+      "size": 60,
+      "icon": "Tailwind"
+    },
+    {
+      "name": "Contentful",
+      "size": 60,
+      "icon": "Contentful"
+    },
+    {
+      "name": "Laravel",
+      "size": 60,
+      "icon": "Laravel"
+    },
+    {
+      "name": "Firebase",
+      "size": 60,
+      "icon": "Firebase"
+    },
+    {
+      "name": "Supabase",
+      "size": 60,
+      "icon": "Supabase"
+    },
+    {
+      "name": "Strapi",
+      "size": 60,
+      "icon": "Strapi"
+    },
+    {
+      "name": "Vercel",
+      "size": 60,
+      "icon": "Vercel"
+    },
+    {
+      "name": "Bitbucket",
+      "size": 60,
+      "icon": "Bitbucket"
+    },
+    {
+      "name": "AWS",
+      "size": 60,
+      "icon": "AWS"
+    }
+  ]
+}

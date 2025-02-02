@@ -1,0 +1,26 @@
+{
+  "data": {
+    "profile": {
+      "name": "Sulthon",
+      "desc": "Web & Mobile Developer"
+    },
+    "contact": [
+      {
+        "name": "Whatsapp",
+        "detail": "+6281905155155"
+      },
+      {
+        "name": "LinkedIn",
+        "detail": "https://www.linkedin.com/in/sulthonmf"
+      },
+      {
+        "name": "Github",
+        "detail": "https://www.github.com/sulthonmf"
+      },
+      {
+        "name": "Gmail",
+        "detail": "sulthonmf@gmail.com"
+      }
+    ]
+  }
+}
