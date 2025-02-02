@@ -1,33 +1,33 @@
-name: NodeJS with Webpack
+# name: NodeJS with Webpack
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+# on:
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x, 22.x]
+#     strategy:
+#       matrix:
+#         node-version: [18.x, 20.x, 22.x]
 
-    steps:
-    - uses: actions/checkout@v4
+#     steps:
+#     - uses: actions/checkout@v4
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
+#     - name: Use Node.js ${{ matrix.node-version }}
+#       uses: actions/setup-node@v4
+#       with:
+#         node-version: ${{ matrix.node-version }}
 
-    - name: Set Node Environment
-      run: echo "NODE_ENV=${{ env.NODE_ENV || 'production' }}" > .env
-      shell: bash
+#     - name: Set Node Environment
+#       run: echo "NODE_ENV=${{ env.NODE_ENV || 'production' }}" > .env
+#       shell: bash
 
-    - name: Install Dependencies
-      run: npm install --legacy-peer-deps
+#     - name: Install Dependencies
+#       run: npm install --legacy-peer-deps
 
-    - name: Build
-      run: npm run build
+#     - name: Build
+#       run: npm run build
