@@ -1,3 +1,6 @@
+"use client";
+
+import Image from "next/image";
 import { SVGProps } from "react";
 
 type SafariMode = "default" | "simple";
@@ -138,14 +141,13 @@ export function Safari({
           </>
         ) : null}
         {imageSrc && (
-          <image
-            href={imageSrc}
-            width="1200"
-            height="700"
-            x="1"
-            y="52"
-            preserveAspectRatio="xMidYMid slice"
-            clipPath="url(#roundedBottom)"
+          <Image
+            src={imageSrc}
+            alt={imageSrc}
+            width={1200}
+            height={700}
+            style={{ position: "absolute", top: 52, left: 1, zIndex: 5000}} // Position over SVG
+            objectFit="cover" // Important for proper scaling
           />
         )}
         {videoSrc && (

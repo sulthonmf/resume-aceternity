@@ -42,7 +42,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full px-6 py-4 backdrop-blur-md z-50">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-lg font-bold text-black dark:text-white">
+        <div className="text-lg font-extrabold text-black dark:text-white">
           _dev.smf
         </div>
 

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SVGProps } from "react";
 
 export interface Iphone15ProProps extends SVGProps<SVGSVGElement> {
@@ -58,14 +59,12 @@ export function Iphone15Pro({
       />
 
       {src && (
-        <image
-          href={src}
-          x="21.25"
-          y="19.25"
-          width="389.5"
-          height="843.5"
-          preserveAspectRatio="xMidYMid slice"
-          clipPath="url(#roundedCorners)"
+        <Image
+          src={src}
+          width={389.5}
+          height={843.5}
+          alt={src}
+          style={{ position: "absolute", top: 52, left: 1, zIndex: 5000 }}
         />
       )}
       {videoSrc && (
