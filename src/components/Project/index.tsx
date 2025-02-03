@@ -63,7 +63,6 @@ export default function Projects() {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 max-w-7xl self-center w-screen h-[500px]">
           <WobbleCard
             containerClassName="relative col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
-            className=""
           >
             <div className="max-w-xs">
               <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
