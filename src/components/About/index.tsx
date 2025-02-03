@@ -4,7 +4,6 @@ import React, { ReactNode, useEffect, useState } from "react";
 import { BentoGrid, BentoGridItem } from "../Common/grid/bento";
 import { IconFileBroken, IconClock, IconCopy } from "@tabler/icons-react";
 import dynamic from "next/dynamic";
-// import { globeConfig, sampleArcs } from "./GlobeMock";
 import { AnimatedSubscribeButton } from "../Common/buttons";
 import { CheckIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
@@ -12,10 +11,6 @@ import AtomicImage from "@/assets/atomic-pattern.png";
 import { Globe } from "../Common/globeV2";
 import { useStore } from "@/store";
 import { COBEOptions } from "cobe";
-
-// const World = dynamic(() => import("../Common/globe").then((m) => m.World), {
-//   ssr: false,
-// });
 
 const initialGlobeConfig: COBEOptions = {
   width: 800,
@@ -63,8 +58,6 @@ export function BentoGridSecondSection() {
       description: "I can work with different of time zone",
       header: (
         <Skeleton className="bg-black dark:bg-neutral-700 backdrop-blur-md">
-          {/* commenting this code due to some bugs at build */}
-          {/* <World data={sampleArcs} globeConfig={globeConfig} /> */}
           <Globe className="top-28" config={globeConfig} />
         </Skeleton>
       ),
