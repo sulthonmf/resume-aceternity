@@ -33,18 +33,18 @@ export default function Navbar() {
     transition-colors duration-300 ease-in-out
     hover:bg-black hover:dark:bg-white 
     hover:text-white hover:dark:text-black
-    ${isActive ? 'bg-black dark:bg-white text-white dark:text-black' : ''}
+    ${isActive ? "bg-black dark:bg-white text-white dark:text-black" : ""}
   `;
 
   return (
     <nav className="fixed top-0 w-full px-6 py-4 backdrop-blur-md z-50">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-lg font-bold">_dev.smf</div>
+        <div className="text-lg font-bold text-white">_dev.smf</div>
 
         <div className="md:hidden">
           <button
             onClick={toggleDarkMode}
-            className="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+            className="md:hidden p-2 rounded-full bg-white hover:bg-gray-200 dark:hover:bg-gray-700"
           >
             {darkMode ? (
               <MoonIcon className="h-6 w-6" />
@@ -53,7 +53,7 @@ export default function Navbar() {
             )}
           </button>
           <button
-            className="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+            className="md:hidden p-2 rounded-full bg-white hover:bg-gray-200 dark:hover:bg-gray-700"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
@@ -105,10 +105,8 @@ export default function Navbar() {
           <a
             href="#about"
             onClick={() => handleSetActive("about")}
-            className={`block px-4 py-2 rounded-md font-bold ${
-              activeLink === "about"
-                ? "bg-black dark:bg-white text-white dark:text-black"
-                : ""
+            className={`block px-4 py-2 rounded-md font-bold text-white dark:text-black ${
+              activeLink === "about" ? "bg-black dark:bg-white" : ""
             }`}
           >
             About
@@ -116,10 +114,8 @@ export default function Navbar() {
           <a
             href="#projects"
             onClick={() => handleSetActive("projects")}
-            className={`block px-4 py-2 rounded-md font-bold ${
-              activeLink === "projects"
-                ? "bg-black dark:bg-white text-white dark:text-black"
-                : ""
+            className={`block px-4 py-2 rounded-md font-bold text-white dark:text-black ${
+              activeLink === "projects" ? "bg-black dark:bg-white" : ""
             }`}
           >
             Projects
@@ -127,9 +123,9 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => handleSetActive("contact")}
-            className={`block px-4 py-2 rounded-md font-bold ${
+            className={`block px-4 py-2 rounded-md font-bold text-white dark:text-black ${
               activeLink === "contact"
-                ? "bg-black dark:bg-white text-white dark:text-black"
+                ? "bg-black dark:bg-white"
                 : ""
             }`}
           >
