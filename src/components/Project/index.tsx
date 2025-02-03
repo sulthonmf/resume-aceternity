@@ -23,7 +23,7 @@ const projects: Project[] = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-16 bg-white dark:bg-black">
+    <section id="projects" className="parent-element py-16 bg-white dark:bg-black">
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold text-center mb-8 text-black dark:text-white">My Professional Project</h2>
         <p className="text-center text-4xl font-bold py-56 underline text-black dark:text-white">Hold On! this section is under maintenance</p>

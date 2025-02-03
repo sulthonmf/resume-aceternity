@@ -113,7 +113,7 @@ export function BentoGridSecondSection() {
   ];
 
   return (
-    <div className="bg-white dark:bg-black w-full">
+    <div className="parent-element bg-white dark:bg-black w-full">
       <BentoGrid className="auto-rows-[30rem] md:auto-rows-[30rem] md:p-6 mx-10 md:mx-40">
         {items?.map((item, i) => (
           <BentoGridItem

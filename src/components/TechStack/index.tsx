@@ -30,7 +30,7 @@ const TechStack = () => {
   return (
     <div
       id="about"
-      className="flex flex-col md:flex-row bg-white dark:bg-black w-full justify-around items-center p-4"
+      className="parent-element flex flex-col pt-44 md:pt-0 md:flex-row bg-white dark:bg-black w-full justify-around items-center p-4"
     >
       <div className="max-w-[600px] w-full text-center md:text-left mb-4 md:mb-0">
         <motion.div

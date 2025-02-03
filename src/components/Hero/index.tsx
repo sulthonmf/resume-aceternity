@@ -33,18 +33,20 @@ export default function Hero() {
   }, [profileData]);
 
   return (
-    <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-background md:shadow-xl bg-black">
-      <div className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-white">
+    <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-background bg-white dark:bg-black">
+      <div className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-black dark:text-white">
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="text-white"
         >
-          <h1 className="text-6xl font-bold">
+          <h1 className="text-6xl font-bold text-black dark:text-white">
             {profileData?.data?.profile?.name}
           </h1>
-          <p className="text-2xl mt-4 font-light">{profileData?.data?.profile?.desc}</p>
+          <p className="text-2xl mt-4 font-light text-black dark:text-white">
+            {profileData?.data?.profile?.desc}
+          </p>
           <ContactIcons contacts={profileData?.data?.contact} />
         </motion.div>
       </div>

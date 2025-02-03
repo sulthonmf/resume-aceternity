@@ -54,7 +54,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 bg-white dark:bg-black">
+    <section id="contact" className="parent-element py-16 bg-white dark:bg-black">
       <div className="max-w-2xl w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input md:border bg-white dark:bg-black">
         <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
           In case you need more detail, let's talk!

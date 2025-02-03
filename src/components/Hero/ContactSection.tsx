@@ -1,6 +1,7 @@
 "use client";
 
-import { JSX } from "react";
+import { useStore } from "@/store";
+import { JSX, useEffect, useState } from "react";
 import { SiWhatsapp, SiLinkedin, SiGithub, SiGmail } from "react-icons/si";
 
 interface Contact {
@@ -8,18 +9,29 @@ interface Contact {
   detail: string;
 }
 
-const iconMap: { [key: string]: JSX.Element } = {
-  Whatsapp: <SiWhatsapp className="h-8 w-8" />,
-  LinkedIn: <SiLinkedin className="h-8 w-8" />,
-  Github: <SiGithub className="h-8 w-8" />,
-  Gmail: <SiGmail className="h-8 w-8" />,
-};
-
 interface ContactIconsProps {
   contacts?: Contact[];
 }
 
 const ContactIcons = ({ contacts = [] }: ContactIconsProps) => {
+  const { darkMode } = useStore();
+  const [ iconColor, setIconColor] = useState("black")
+
+  useEffect(() => {
+    if (darkMode) {
+      setIconColor("white")
+    } else {
+      setIconColor("black")
+    }
+  }, [darkMode])
+
+  const iconMap: { [key: string]: JSX.Element } = {
+    Whatsapp: <SiWhatsapp className="h-8 w-8" color={iconColor}/>,
+    LinkedIn: <SiLinkedin className="h-8 w-8" color={iconColor}/>,
+    Github: <SiGithub className="h-8 w-8" color={iconColor}/>,
+    Gmail: <SiGmail className="h-8 w-8" color={iconColor}/>,
+  };
+
   const generateHref = (contact: Contact) => {
     const { name, detail } = contact;
 
