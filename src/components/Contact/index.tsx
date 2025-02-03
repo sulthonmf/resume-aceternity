@@ -54,7 +54,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 bg-black">
+    <section id="contact" className="py-16 bg-white dark:bg-black">
       <div className="max-w-2xl w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input md:border bg-white dark:bg-black">
         <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
           In case you need more detail, let's talk!
@@ -66,21 +66,21 @@ export default function Contact() {
         <form className="my-8" onSubmit={handleSubmit(onSubmit)}>
           <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
             <LabelInputContainer>
-              <Label htmlFor="firstname">First name</Label>
+              <Label htmlFor="firstname" className="text-black dark:text-white">First name</Label>
               <Input id="firstname" placeholder="Jhon" type="text" />
             </LabelInputContainer>
             <LabelInputContainer>
-              <Label htmlFor="lastname">Last name</Label>
+              <Label htmlFor="lastname" className="text-black dark:text-white">Last name</Label>
               <Input id="lastname" placeholder="Doe" type="text" />
             </LabelInputContainer>
           </div>
           <LabelInputContainer className="mb-4">
-            <Label htmlFor="email">Email Address</Label>
+            <Label htmlFor="email" className="text-black dark:text-white">Email Address</Label>
             <Input id="email" placeholder="jhondoe@mail.com" type="email" />
           </LabelInputContainer>
           <LabelInputContainer className="mb-4">
-            <Label htmlFor="email">Message</Label>
-            <Input id="text" type="text" placeholder="Type something here..." className="h-[200px]"/>
+            <Label htmlFor="message" className="text-black dark:text-white">Message</Label>
+            <Input id="message" type="text" placeholder="Type something here..." className="h-[200px]"/>
           </LabelInputContainer>
 
           <button

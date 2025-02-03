@@ -23,10 +23,10 @@ const projects: Project[] = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-16 bg-black">
+    <section id="projects" className="py-16 bg-white dark:bg-black">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-8">My Professional Project</h2>
-        <p className="text-center text-4xl font-bold py-56 underline">Hold On! this section is under maintenance</p>
+        <h2 className="text-4xl font-bold text-center mb-8 text-black dark:text-white">My Professional Project</h2>
+        <p className="text-center text-4xl font-bold py-56 underline text-black dark:text-white">Hold On! this section is under maintenance</p>
         {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
