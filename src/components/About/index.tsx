@@ -11,12 +11,13 @@ import Image from "next/image";
 import AtomicImage from "@/assets/atomic-pattern.png";
 import { Globe } from "../Common/globeV2";
 import { useStore } from "@/store";
+import { COBEOptions } from "cobe";
 
 // const World = dynamic(() => import("../Common/globe").then((m) => m.World), {
 //   ssr: false,
 // });
 
-const initialGlobeConfig = {
+const initialGlobeConfig: COBEOptions = {
   width: 800,
   height: 800,
   onRender: () => {},
