@@ -5,6 +5,7 @@ import { RetroGrid } from "../Common/background/retro";
 import ProfileDataJSON from "./hero.json";
 import { useEffect, useState } from "react";
 import ContactIcons from "./ContactSection";
+import { PulsatingButton } from "../Common/buttons";
 
 interface Profile {
   name: string;
@@ -52,6 +53,18 @@ export default function Hero() {
       </div>
 
       <RetroGrid />
+
+      <PulsatingButton
+        onClick={() =>
+          window.open(
+            "https://drive.google.com/file/d/1xC-LJC_hJlFXsmcnzaoaGjZ_DlY47F1u/view?usp=drive_link"
+          )
+        }
+        className="mt-10 bg-black dark:bg-white text-white dark:text-black font-bold"
+        pulseColor="grey"
+      >
+        Download CV
+      </PulsatingButton>
     </div>
   );
 }

@@ -7,7 +7,7 @@ const {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'class',
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -23,9 +23,11 @@ module.exports = {
       },
       animation: {
         shimmer: "shimmer 2s linear infinite",
-        ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
+        // ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
         grid: "grid 15s linear infinite",
         orbit: "orbit calc(var(--duration)*1s) linear infinite",
+        rippling: "rippling var(--duration) ease-out",
+        pulse: "pulse var(--duration) ease-out infinite",
       },
       keyframes: {
         shimmer: {
@@ -36,14 +38,14 @@ module.exports = {
             backgroundPosition: "-200% 0",
           },
         },
-        ripple: {
-          "0%, 100%": {
-            transform: "translate(-50%, -50%) scale(1)",
-          },
-          "50%": {
-            transform: "translate(-50%, -50%) scale(0.9)",
-          },
-        },
+        // ripple: {
+        //   "0%, 100%": {
+        //     transform: "translate(-50%, -50%) scale(1)",
+        //   },
+        //   "50%": {
+        //     transform: "translate(-50%, -50%) scale(0.9)",
+        //   },
+        // },
         grid: {
           "0%": { transform: "translateY(-50%)" },
           "100%": { transform: "translateY(0)" },
@@ -57,6 +59,19 @@ module.exports = {
             transform:
               "rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg))",
           },
+        },
+        rippling: {
+          "0%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "scale(2)",
+            opacity: "0",
+          },
+        },
+        pulse: {
+          "0%, 100%": { boxShadow: "0 0 0 0 var(--pulse-color)" },
+          "50%": { boxShadow: "0 0 0 8px var(--pulse-color)" },
         },
       },
     },
