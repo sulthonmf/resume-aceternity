@@ -36,8 +36,7 @@ export default function Navbar() {
     transition-colors duration-300 ease-in-out
     hover:bg-black hover:dark:bg-white 
     hover:text-white hover:dark:text-black
-    text-black dark:text-white
-    ${isActive ? "bg-black dark:bg-white text-white dark:text-black" : ""}
+    ${isActive ? "bg-black dark:bg-white text-white dark:text-black" : "text-black dark:text-white"}
   `;
 
   return (
