@@ -28,6 +28,14 @@ export default function Navbar() {
     setIsMenuOpen(false); // Close menu after clicking
   };
 
+  const linkStyles = (isActive: boolean) => `
+    px-3 py-1 rounded-full font-bold 
+    transition-colors duration-300 ease-in-out
+    hover:bg-black hover:dark:bg-white 
+    hover:text-white hover:dark:text-black
+    ${isActive ? 'bg-black dark:bg-white text-white dark:text-black' : ''}
+  `;
+
   return (
     <nav className="fixed top-0 w-full px-6 py-4 backdrop-blur-md z-50">
       <div className="container mx-auto flex justify-between items-center">
@@ -60,33 +68,21 @@ export default function Navbar() {
           <a
             href="#about"
             onClick={() => handleSetActive("about")}
-            className={`px-3 py-1 rounded-full font-bold ${
-              activeLink === "about"
-                ? "bg-black dark:bg-white text-white dark:text-black"
-                : ""
-            }`}
+            className={linkStyles(activeLink === "about")}
           >
             About
           </a>
           <a
             href="#projects"
             onClick={() => handleSetActive("projects")}
-            className={`px-3 py-1 rounded-full font-bold ${
-              activeLink === "projects"
-                ? "bg-black dark:bg-white text-white dark:text-black"
-                : ""
-            }`}
+            className={linkStyles(activeLink === "projects")}
           >
             Projects
           </a>
           <a
             href="#contact"
             onClick={() => handleSetActive("contact")}
-            className={`px-3 py-1 rounded-full font-bold ${
-              activeLink === "contact"
-                ? "bg-black dark:bg-white text-white dark:text-black"
-                : ""
-            }`}
+            className={linkStyles(activeLink === "contact")}
           >
             Contact
           </a>
